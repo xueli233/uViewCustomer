@@ -339,7 +339,9 @@
 					${v.sex?
 					`<u-form-item :label-position="labelPosition" label="性别" prop="sex">
 						<u-input :border="border" type="select" :select-open="actionSheetShow" v-model="model.sex" placeholder="请选择性别" @click="actionSheetShow = true"></u-input>
-					</u-form-item>`:''
+					</u-form-item>
+							<u-action-sheet :list="actionSheetList" v-model="actionSheetShow" @click="actionSheetCallback"></u-action-sheet>
+					`:''
 					}
 					${v.intro?
 					`<u-form-item :label-position="labelPosition" label="简介" prop="intro">
@@ -368,12 +370,16 @@
 						<u-radio-group v-model="radio" @change="radioGroupChange" :width="radioCheckWidth" :wrap="radioCheckWrap">
 							<u-radio shape="circle" v-model="item.checked" v-for="(item, index) in radioList" :key="index" :name="item.name">{{ item.name }}</u-radio>
 						</u-radio-group>
-					</u-form-item>`:''
+					</u-form-item>
+					<u-select mode="single-column" :list="selectList" v-model="selectShow" @confirm="selectConfirm"></u-select>
+					`:''
 					}
 					${v.region?
 					`<u-form-item :label-position="labelPosition" label="所在地区" prop="region" label-width="150">
 						<u-input :border="border" type="select" :select-open="pickerShow" v-model="model.region" placeholder="请选择地区" @click="pickerShow = true"></u-input>
-					</u-form-item>`:''
+					</u-form-item>
+					<u-picker mode="region" v-model="pickerShow" @confirm="regionConfirm"></u-picker>
+					`:''
 					}
 					${v.goodsType?
 					`<u-form-item :label-position="labelPosition" label="商品类型" prop="goodsType" label-width="150">
@@ -389,7 +395,9 @@
 					`<u-form-item :label-position="labelPosition" label="验证码" prop="code" label-width="150">
 						<u-input :border="border" placeholder="请输入验证码" v-model="model.code" type="text"></u-input>
 						<u-button slot="right" type="success" size="mini" @click="getCode">{{codeTips}}</u-button>
-					</u-form-item>`:''
+					</u-form-item>
+					<u-verification-code seconds="60" ref="uCode" @change="codeChange"></u-verification-code>
+					`:''
 					}
 					${v.remember?
 					`<u-form-item :label-position="labelPosition" label="记住密码" prop="remember" label-width="150">
