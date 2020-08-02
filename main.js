@@ -33,39 +33,57 @@ Vue.mixin({
 	data() {
 		return {}
 	},
-	beforeDestroy() {
-		console.log(this.route );
-		if (this.route && this.route.startsWith('pages/components')) {
-			var str = uni.getStorageSync('uViewSettings'),
-				uViewSettings;
-			if (str) {
-				uViewSettings = JSON.parse(str);
-			} else {
-				uViewSettings = {};
-			}
+	onNavigationBarButtonTap(e) {
+		console.log(1113, e, this);
+		let {
+			index
+		} = e;
+		var str = uni.getStorageSync('uViewSettings'),
+			uViewSettings;
+		if (str) uViewSettings = JSON.parse(str);
+		else uViewSettings = {};
+		// 保存
+		if (index === 0) {
 
-			uni.showModal({
-				title: '是否添加组件？',
-				success: (e) => {
-					if (e.confirm) {
-						var routeArr = this.route.split('/');
-						if (routeArr && routeArr[2]) uViewSettings[routeArr[2]] = this.$data;
-						console.log(this.route, e, this.$data);
-						uni.setStorage({
-							data: JSON.stringify(uViewSettings),
-							key: 'uViewSettings'
-						});
-						// uniCloud.callFunction({
-						// 	name: 'pluginConfiguration',
-						// 	data: {
-						// 		datas: uViewSettings
-						// 	}
-						// }).then(res => {});
-					}
+			var routeArr = this.route.split('/');
+			if (routeArr && routeArr[2]) uViewSettings[routeArr[2]] = this.$data;
+			uni.setStorage({
+				data: JSON.stringify(uViewSettings),
+				key: 'uViewSettings',
+				success() {
+					uni.showToast({
+						title: '添加成功!'
+					})
 				}
-			})
-
+			});
+		} else if (index === 1) {
+			uniCloud.callFunction({
+				name: 'pluginConfigurationDelete',
+			}).then(res => {
+				uni.removeStorage({
+					key: 'uViewSettings'
+				})
+				uni.showToast({
+					title: '已全部清空!'
+				});
+				this.uViewSettings={};
+			});
+		} else if (index === 2) {
+			// 上传
+			uniCloud.callFunction({
+				name: 'pluginConfiguration',
+				data: {
+					datas: uViewSettings
+				}
+			}).then(res => {
+				uni.showToast({
+					title: '上传成功'
+				});
+			});
 		}
+	},
+	beforeDestroy() {
+
 	},
 	onShow() {
 

@@ -839,7 +839,34 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uView",
 		"navigationBarBackgroundColor": "#FFFFFF",
-		"backgroundColor": "#FFFFFF"
+		"backgroundColor": "#FFFFFF",
+		"app-plus": {
+		            "titleNView": {
+		                "buttons": [
+		                    {
+		                        "text": "\ue68a",
+								"fontSrc":"/static/iconfont.ttf",
+		                        "fontSize": "20px",
+		                        "float": "right",
+								"width":"32px"
+		                    },
+		                    {
+		                        "text": "\ue614",
+								"fontSrc":"/static/iconfont.ttf",
+		                        "fontSize": "20px",
+		                        "float": "right",
+								"width":"32px"
+		                    },
+		                    {
+		                        "text": "\ue634",
+								"fontSrc":"/static/iconfont.ttf",
+		                        "fontSize": "20px",
+		                        "float": "right",
+								"width":"32px"
+		                    }
+		                ]
+		            }
+		        }
 	},
 	"tabBar": {
 		"color": "#909399",
