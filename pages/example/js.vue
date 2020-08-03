@@ -1,6 +1,6 @@
 <template>
 	<view class="wrap">
-		<page-nav :desc="desc"></page-nav>
+		<!-- <page-nav :desc="desc"></page-nav> -->
 		<view class="list-wrap">
 			<u-cell-group title-bg-color="rgb(243, 244, 246)" :title="item.groupName" v-for="(item, index) in list" :key="index">
 				<u-cell-item :titleStyle="{fontWeight: 500}" @click="openPage(item1.path)" :title="item1.title" v-for="(item1, index1) in item.list" :key="index1">
