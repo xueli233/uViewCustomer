@@ -8,6 +8,11 @@
 				 :show="show" :size="size" />
 			</block>
 		</view>
+		<u-cell-group title-bg-color="rgb(243, 244, 246)">
+			<u-cell-item :titleStyle="{fontWeight: 500}" @click="openPage(item1.path)" :title="item1.title" v-for="(item1, index1) in list" :key="index1">
+				<image slot="icon" class="u-cell-icon" :src="getIcon(item1.icon)" mode="widthFix"></image>
+			</u-cell-item>
+		</u-cell-group>
 	</view>
 </template>
 
@@ -26,6 +31,20 @@
 				size: "default",
 				text: "蒹葭苍苍",
 				type: "primary",
+				list:[
+					{
+						path: '/pages/example/sign',
+						icon: 'icon',
+						title: '签名',
+					}
+				]
+			}
+		},
+		computed: {
+			getIcon() {
+				return path => {
+					return 'https://cdn.uviewui.com/uview/example/' + path + '.png';
+				}
 			}
 		},
 		onShow() {
@@ -39,6 +58,12 @@
 			this.uViewSettings = uViewSettings;
 		},
 		methods: {
+
+			openPage(path) {
+				this.$u.route({
+					url: path
+				})
+			},
 			// 关闭
 			close(k) {
 				console.log(k);
@@ -84,5 +109,11 @@
 		margin-top: 20rpx;
 		font-size: 28rpx;
 		color: $u-content-color;
+	}
+
+	.u-cell-icon {
+		width: 36rpx;
+		height: 36rpx;
+		margin-right: 8rpx;
 	}
 </style>

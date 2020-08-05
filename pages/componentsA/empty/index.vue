@@ -87,11 +87,19 @@
 		data() {
 			return {
 				mode: 'data',
-				slot: false
+				slot: false,
+				template:''
 			}
 		},
 		methods: {
 			modeChange(mode = 'data') {
+				this.template = `
+				<u-empty mode="${mode}">
+					<u-button slot="bottom" size="medium">
+						slot按钮
+					</u-button>
+				</u-empty>
+				`;
 				this.mode = mode;
 			},
 			slotChange(index) {

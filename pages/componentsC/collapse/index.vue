@@ -59,10 +59,19 @@
 				accordion: true,
 				arrow: true,
 				hoverClass: 'hover2',
-				itemStyle: {}
+				itemStyle: {},
+				template: '',
 			}
 		},
 		methods: {
+			getTemplate() {
+				this.template =
+					`	<u-collapse :item-style="itemStyle" event-type="close" :arrow="${this.arrow}" :accordion="${this.accordion}" @change="change">
+					<u-collapse-item :index="index" @change="itemChange" :title="item.head" v-for="(item, index) in itemList" :key="index">
+						{{item.body}}
+					</u-collapse-item>
+				</u-collapse>`
+			},
 			accordionChange(index) {
 				this.accordion = index == 0 ? true : false;
 			},
@@ -70,7 +79,7 @@
 				this.arrow = index == 0 ? true : false;
 			},
 			styleChange(index) {
-				if(index == 0) {
+				if (index == 0) {
 					this.itemStyle = {
 						border: '1px solid rgb(230, 230, 230)',
 						marginTop: '20px',
@@ -82,7 +91,7 @@
 			},
 			change(index) {
 				let str = '';
-				if(Array.isArray(index)) {
+				if (Array.isArray(index)) {
 					let arr = index.map(val => {
 						return Number(val) + 1;
 					})
