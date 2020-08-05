@@ -44,7 +44,6 @@ Vue.mixin({
 		else uViewSettings = {};
 		// 保存
 		if (index === 0) {
-
 			var routeArr = this.route.split('/');
 			if (routeArr && routeArr[2]) uViewSettings[routeArr[2]] = this.$data;
 			uni.setStorage({
