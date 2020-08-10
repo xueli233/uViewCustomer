@@ -16,7 +16,5 @@
 <style lang="scss">
 	@import "uview-ui/index.scss";
 	@import "common/demo.scss";
-	@import "uview-ui/libs/css/xc-style-base.css";
-	@import "uview-ui/libs/css/xc-style-wap.css";
 	/*每个页面公共css */
 </style>

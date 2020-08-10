@@ -51,6 +51,13 @@
 			"style": {
 				"navigationBarTitleText": "签名"
 			}
+		},
+		{
+			"path": "pages/example/qrcode",
+			"style": {
+				"navigationBarTitleText": "海报生成",
+				"navigationStyle": "default"
+			}
 		}
 	],
 	"subPackages": [

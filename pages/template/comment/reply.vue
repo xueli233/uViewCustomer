@@ -3,7 +3,8 @@
 		<view class="comment">
 			<view class="top">
 				<view class="left">
-					<view class="heart-photo"><image :src="comment.url" mode=""></image></view>
+					<view class="heart-photo">
+						<image :src="comment.url" mode=""></image></view>
 					<view class="user-info">
 						<view class="name">{{ comment.name }}</view>
 						<view class="date">06-25 13:58</view>

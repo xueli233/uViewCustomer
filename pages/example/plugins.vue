@@ -29,14 +29,11 @@
 				shape: "square",
 				show: true,
 				size: "default",
-				text: "蒹葭苍苍",
+				text: "",
 				type: "primary",
 				list:[
-					{
-						path: '/pages/example/sign',
-						icon: 'icon',
-						title: '签名',
-					}
+					{ path: '/pages/example/sign', icon: 'icon', title: '签名', },
+					{ path: '/pages/example/qrcode', icon: 'icon', title: '海报生成', },
 				]
 			}
 		},
