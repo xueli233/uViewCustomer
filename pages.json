@@ -58,6 +58,13 @@
 				"navigationBarTitleText": "海报生成",
 				"navigationStyle": "default"
 			}
+		},
+		{
+			"path": "pages/example/normalScrollView",
+			"style": {
+				"navigationBarTitleText": "普通的滚动列表",
+				"navigationStyle": "default"
+			}
 		}
 	],
 	"subPackages": [
