@@ -65,6 +65,13 @@
 				"navigationBarTitleText": "普通的滚动列表",
 				"navigationStyle": "default"
 			}
+		},
+		{
+			"path": "pages/example/normalSearchList",
+			"style": {
+				"navigationBarTitleText": "简单的搜索列表",
+				"navigationStyle": "default"
+			}
 		}
 	],
 	"subPackages": [
