@@ -71,8 +71,6 @@
 			</u-cell-group>
 		</view>
 	</view>
-
-	</view>
 </template>
 
 <script>

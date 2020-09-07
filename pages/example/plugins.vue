@@ -37,6 +37,7 @@
 					{ path: '/pages/example/normalScrollView', icon: 'icon', title: '普通的滚动列表', },
 					{ path: '/pages/example/normalSearchList', icon: 'icon',title:'普通的搜索列表' },
 					{ path: '/pages/example/my1', icon: 'icon',title:'个人中心1' },
+					{ path: '/pages/example/house', icon: 'icon',title:'房屋列表' },
 				]
 			}
 		},

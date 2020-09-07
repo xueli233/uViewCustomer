@@ -79,6 +79,20 @@
 				"navigationBarTitleText": "简单的搜索列表",
 				"navigationStyle": "default"
 			}
+		},
+		{
+			"path": "pages/example/house\\",
+			"style": {
+				"navigationBarTitleText": "房屋列表",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/example/house",
+			"style": {
+				"navigationBarTitleText": "房屋列表",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"subPackages": [
