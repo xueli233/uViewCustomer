@@ -105,19 +105,19 @@
 									<u-col span="4">
 										<view class="xc-flex xc-flex-column justify-center align-center">
 											<image class="xc-w-35 xc-h-35" src="/static/my1/ico-zhuangxiu.png" mode="aspectFit"></image>
-											<text class="xc-text-15">装修需求</text>
+											<text class="xc-text-15 xc-margin-t-15">装修需求</text>
 										</view>
 									</u-col>
 									<u-col span="4">
 										<view class="xc-flex xc-flex-column justify-center align-center">
-											<image class="xc-w-35 xc-h-35" src="/static/my1/ico-zhuangxiu.png" mode="aspectFit"></image>
-											<text class="xc-text-15">装修需求</text>
+											<image class="xc-w-35 xc-h-35" src="/static/my1/ico-zhuangxiu(1).png" mode="aspectFit"></image>
+											<text class="xc-text-15 xc-margin-t-15">收到询价</text>
 										</view>
 									</u-col>
 									<u-col span="4">
 										<view class="xc-flex xc-flex-column justify-center align-center">
-											<image class="xc-w-35 xc-h-35" src="/static/my1/ico-zhuangxiu.png" mode="aspectFit"></image>
-											<text class="xc-text-15">装修需求</text>
+											<image class="xc-w-35 xc-h-35" src="/static/my1/ico-ddan.png" mode="aspectFit"></image>
+											<text class="xc-text-15 xc-margin-t-15">我的订单</text>
 										</view>
 									</u-col>
 								</u-row>
@@ -126,27 +126,27 @@
 						<!--  -->
 						<view class="">
 							<u-cell-group :border="false">
-								<u-cell-item  title="我的询价" value="0">
+								<u-cell-item title="我的询价" value="0">
 									<view class="xc-flex align-center xc-margin-r-5" slot="icon">
 										<image class="xc-w-15 xc-h-15" src="/static/my1/xunjia.png" mode="aspectFit"></image>
 									</view>
 								</u-cell-item>
-								<u-cell-item  title="我的关注" >
+								<u-cell-item title="我的关注">
 									<view class="xc-flex align-center xc-margin-r-5" slot="icon">
 										<image class="xc-w-15 xc-h-15" src="/static/my1/guanzhu.png" mode="aspectFit"></image>
 									</view>
 								</u-cell-item>
-								<u-cell-item  title="联系客服">
+								<u-cell-item title="联系客服">
 									<view class="xc-flex align-center xc-margin-r-5" slot="icon">
 										<image class="xc-w-15 xc-h-15" src="/static/my1/kefu.png" mode="aspectFit"></image>
 									</view>
 								</u-cell-item>
-								<u-cell-item  title="常见问题" >
+								<u-cell-item title="常见问题">
 									<view class="xc-flex align-center xc-margin-r-5" slot="icon">
 										<image class="xc-w-15 xc-h-15" src="/static/my1/wenti.png" mode="aspectFit"></image>
 									</view>
 								</u-cell-item>
-								<u-cell-item  title="关于我们" >
+								<u-cell-item title="关于我们">
 									<view class="xc-flex align-center xc-margin-r-5" slot="icon">
 										<image class="xc-w-15 xc-h-15" src="/static/my1/guanyuwm.png" mode="aspectFit"></image>
 									</view>
@@ -170,18 +170,17 @@
 						onLoad() {}
 					}
 				</ script>
-				
 				<style lang="scss" scoped>
 					.card {
 						width: 710rpx;
 						height: 214rpx;
 						position: relative;
 						background: rgba(255, 255, 255, 1);
-						box-shadow: 0px 0px 25rpx 2rpx rgba(226, 226, 226, 0.66);
+						box-shadow: 0 0 25rpx 2rpx rgba(226, 226, 226, 0.66);
 						border-radius: 20rpx;
 						width: 710rpx;
 						height: 214rpx;
-						border-radius: 20rpx;
+						border-radius: 20 rpx;
 						left: 50%;
 						top: 50%;
 						z-index: 99;
