@@ -36,6 +36,7 @@
 					{ path: '/pages/example/qrcode', icon: 'icon', title: '海报生成', },
 					{ path: '/pages/example/normalScrollView', icon: 'icon', title: '普通的滚动列表', },
 					{ path: '/pages/example/normalSearchList', icon: 'icon',title:'普通的搜索列表' },
+					{ path: '/pages/example/my1', icon: 'icon',title:'个人中心1' },
 				]
 			}
 		},

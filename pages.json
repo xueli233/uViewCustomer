@@ -67,6 +67,13 @@
 			}
 		},
 		{
+			"path": "pages/example/my1",
+			"style": {
+				"navigationBarTitleText": "个人页面",
+				"navigationStyle": "default"
+			}
+		},
+		{
 			"path": "pages/example/normalSearchList",
 			"style": {
 				"navigationBarTitleText": "简单的搜索列表",
