@@ -120,7 +120,7 @@
 	.wrap {
 	display: flex;
 	flex-direction: column;
-	height: calc(100vh - var(--window-top));
+	min-height: calc(100vh - var(--window-top));
 	width: 100%;
 }
 
