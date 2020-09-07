@@ -35,7 +35,7 @@
 					{ path: '/pages/example/sign', icon: 'icon', title: '签名', },
 					{ path: '/pages/example/qrcode', icon: 'icon', title: '海报生成', },
 					{ path: '/pages/example/normalScrollView', icon: 'icon', title: '普通的滚动列表', },
-					{ path: '/pages/example/normalSearchList', icon: 'icon','普通的搜索列表' },
+					{ path: '/pages/example/normalSearchList', icon: 'icon',title:'普通的搜索列表' },
 				]
 			}
 		},
