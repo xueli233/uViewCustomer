@@ -41,7 +41,11 @@
 				</view>
 			</view>
 
-			
+			<view class="xc-h-50">
+			</view>
+			<view class="addBtn safe-area-inset-bottom">
+				<u-button size="default" :custom-style="customStyle">新增房屋信息</u-button>
+			</view>
 
 		</view>
 	</view>
@@ -96,6 +100,11 @@
 									</view>
 								</view>
 							</view>
+			<view class="xc-h-50">
+			</view>
+			<view class="addBtn safe-area-inset-bottom">
+				<u-button size="default" :custom-style="customStyle">新增房屋信息</u-button>
+			</view>
 						</view>
 					</view>
 				</template>
@@ -149,6 +158,17 @@
 							background-color: #606266;
 						}
 					}
+						.addBtn {
+		display: flex;
+		align-items: center;
+		position: relative;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 998;
+		box-sizing: content-box;
+	}
 				</style>
 				`
 			};
@@ -190,5 +210,16 @@
 			transform: translateY(-38%);
 			background-color: #606266;
 		}
+	}
+		.addBtn {
+		display: flex;
+		align-items: center;
+		position: relative;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 998;
+		box-sizing: content-box;
 	}
 </style>
