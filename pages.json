@@ -65,6 +65,12 @@
 				"navigationBarTitleText": "普通的滚动列表",
 				"navigationStyle": "default"
 			}
+		},	{
+			"path": "pages/example/normalSearchList",
+			"style": {
+				"navigationBarTitleText": "普通的搜索列表",
+				"navigationStyle": "default"
+			}
 		},
 		{
 			"path": "pages/example/my1",
@@ -77,6 +83,13 @@
 			"path": "pages/example/house",
 			"style": {
 				"navigationBarTitleText": "房屋列表",
+				"navigationStyle": "default"
+			}
+		},
+		{
+			"path": "pages/example/designList",
+			"style": {
+				"navigationBarTitleText": "设计师列表",
 				"navigationStyle": "default"
 			}
 		}

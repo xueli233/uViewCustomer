@@ -43,7 +43,7 @@
 
 			<view class="xc-h-50">
 			</view>
-			<view class="addBtn safe-area-inset-bottom">
+			<view class="addBtn safe-area-inset-bottom xc-w-100p">
 				<u-button size="default" :custom-style="customStyle">新增房屋信息</u-button>
 			</view>
 
@@ -57,7 +57,14 @@
 		data() {
 			return {
 				check: true,
-				templateAll:`
+				customStyle: {
+					background: '#294D7C',
+					color: '#fff',
+					borderRadius: 'none',
+					width: '750rpx',
+					height: '88rpx'
+				},
+				templateAll: `
 				<template>
 					<view class="wrap page house">
 						<view class="">
@@ -114,7 +121,14 @@
 						name: "house",
 						data() {
 							return {
-								check: true
+								check: true,
+								customStyle: {
+									background: '#294D7C',
+									color: '#fff',
+									borderRadius: 'none',
+									width: '750rpx',
+									height: '88rpx'
+								},
 							};
 						},
 						methods: {},
@@ -179,12 +193,11 @@
 		onLoad() {},
 	};
 </script>
-
 <style lang="scss" scoped>
 	.page {
 		background-color: #F2F2F2;
 		display: flex;
-		flex:1
+		flex: 1
 	}
 
 	.item {
@@ -211,7 +224,8 @@
 			background-color: #606266;
 		}
 	}
-		.addBtn {
+
+	.addBtn {
 		display: flex;
 		align-items: center;
 		position: relative;
